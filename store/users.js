@@ -2,9 +2,11 @@ import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunkMiddleware from 'redux-thunk';
 
+import mockUsers from './mock-response';
+
 const exampleInitialState = {
   isLoading: false,
-  users: ['1', '2']
+  users: mockUsers.items
 };
 
 // REDUCERS
