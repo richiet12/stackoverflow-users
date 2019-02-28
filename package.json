@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "next": "^7.0.3",
+    "prop-types": "^15.6.2",
     "react": "^16.7.0",
     "redux-devtools-extension": "^2.13.2",
     "react-dom": "^16.7.0",
