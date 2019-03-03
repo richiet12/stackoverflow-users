@@ -14,7 +14,7 @@ import styles from './styles';
 
 const UserCard = ({ user: { display_name, reputation, profile_image } }) => {
   return (
-    <div className={styles.userCard}>
+    <div className={styles.userCard} data-testid="user-card">
       <Image
         src={replaceImageSize(profile_image, 375)}
         altText={`${display_name} profile image`}
@@ -22,16 +22,15 @@ const UserCard = ({ user: { display_name, reputation, profile_image } }) => {
       />
       <div className={styles.details}>
         <p className={styles.name}>{display_name}</p>
-        <div className={styles.stars}>
-          <StarRatings
-            rating={starRating(reputation)}
-            starRatedColor={colours.primary}
-            numberOfStars={5}
-            name="rating"
-            starDimension={25}
-            starSpacing={2}
-          />
-        </div>
+        <StarRatings
+          rating={starRating(reputation)}
+          starRatedColor={colours.primary}
+          numberOfStars={5}
+          name="rating"
+          starDimension="25"
+          starSpacing="2"
+          data-testid="reputation"
+        />
       </div>
     </div>
   );

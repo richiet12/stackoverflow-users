@@ -7,10 +7,12 @@
     "start": "next start",
     "lint-js": "./node_modules/.bin/eslint components/.",
     "docz:dev": "docz dev -p 3001",
-    "docz:build": "docz build"
+    "docz:build": "docz build",
+    "test": "jest"
   },
   "dependencies": {
     "emotion": "^10.0.7",
+    "jest-dom": "^3.1.2",
     "next": "^7.0.3",
     "null": "^1.0.1",
     "prop-types": "^15.6.2",
@@ -18,11 +20,14 @@
     "react-dom": "^16.7.0",
     "react-redux": "^5.0.1",
     "react-star-ratings": "^2.3.0",
+    "react-testing-library": "^5.4.2",
     "redux": "^3.6.0",
     "redux-devtools-extension": "^2.13.2",
     "redux-thunk": "^2.1.0"
   },
   "devDependencies": {
+    "@babel/core": "7.3.4",
+    "babel-jest": "24.1.0",
     "docz": "^0.13.5",
     "docz-theme-default": "^0.13.5",
     "enzyme": "^3.3.0",
@@ -35,6 +40,7 @@
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.4.0",
+    "jest": "24.1.0",
     "prettier": "^1.16.4"
   }
 }

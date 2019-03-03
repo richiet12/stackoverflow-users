@@ -24,20 +24,10 @@ const details = css`
 
 const name = css`
   font-size: 20px;
-  //   text-decoration: underline;
-  //   float: left;
   display: 'block';
   @media (min-width: 420px) {
-    // text-align: left;
     font-size: 30px;
   }
-`;
-
-const stars = css`
-  //   width: 200px;
-  //   //   float: left;
-  //   display: 'block';
-  //   margin: 0 auto;
 `;
 
 const profileImg = css`
@@ -53,4 +43,4 @@ const profileImg = css`
   }
 `;
 
-export default { userCard, details, name, stars, profileImg };
+export default { userCard, details, name, profileImg };
