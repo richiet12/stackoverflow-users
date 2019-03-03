@@ -1,18 +1,25 @@
 import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
-import Title from '../components/title';
-import Image from '../components/image';
+import Head from 'next/head';
+
+import Header from '../components/Header';
+import UserCard from '../components/UserCard/index';
+
+import pageStyles from '../styles/page';
+
+const title = 'Top Stackoverflow users';
 
 const Index = ({ isLoading, users }) => (
   <Fragment>
-    <Title />
-    {users.map(user => (
-      <div>
-        <p>{user.display_name}</p>
-        <p>{user.reputation}</p>
-        <Image src={user.profile_image} altText={`${user.display_name} profile image`} />
-      </div>
-    ))}
+    <Head>
+      <title>{title}</title>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" />
+    </Head>
+    <div className={pageStyles.container}>
+      <Header text={title} />
+      {users.map(user => UserCard({ user }))}
+    </div>
   </Fragment>
 );
 

@@ -1,23 +1,30 @@
 {
-  "name": "with-redux",
+  "name": "top-stackoverflow-users",
   "version": "1.0.0",
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "lint-js": "./node_modules/.bin/eslint components/."
+    "lint-js": "./node_modules/.bin/eslint components/.",
+    "docz:dev": "docz dev -p 3001",
+    "docz:build": "docz build"
   },
   "dependencies": {
+    "emotion": "^10.0.7",
     "next": "^7.0.3",
+    "null": "^1.0.1",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
-    "redux-devtools-extension": "^2.13.2",
     "react-dom": "^16.7.0",
     "react-redux": "^5.0.1",
+    "react-star-ratings": "^2.3.0",
     "redux": "^3.6.0",
+    "redux-devtools-extension": "^2.13.2",
     "redux-thunk": "^2.1.0"
   },
   "devDependencies": {
+    "docz": "^0.13.5",
+    "docz-theme-default": "^0.13.5",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.9.0",
