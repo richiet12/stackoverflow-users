@@ -1,5 +1,5 @@
-// Component - User card
-// Render user card
+// Component - Star legend
+// Render information regarding the stars
 
 import React from 'react';
 import StarRatings from 'react-star-ratings';
