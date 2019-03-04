@@ -30,9 +30,9 @@ const Index = ({ users }) => (
 Index.propTypes = {
   users: PropTypes.arrayOf(
     PropTypes.shape({
-      display_name: PropTypes.string,
+      displayName: PropTypes.string,
       reputation: PropTypes.number,
-      profile_image: PropTypes.string
+      profileImage: PropTypes.string
     })
   ).isRequired
 };
