@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import Head from 'next/head';
 import { getUsers } from '../store/users';
 
 import Header from '../components/Header';
@@ -14,11 +13,6 @@ const title = 'Top Stackoverflow users';
 
 const Index = ({ users }) => (
   <Fragment>
-    <Head>
-      <title>{title}</title>
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" />
-    </Head>
     <div className={pageStyles.container}>
       <Header text={title} />
       <StarLegend />
