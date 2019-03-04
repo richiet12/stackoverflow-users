@@ -1,5 +1,3 @@
-/* eslint-env jest */
-
 import React from 'react';
 import { render } from 'react-testing-library';
 import 'jest-dom/extend-expect';
@@ -7,9 +5,9 @@ import 'jest-dom/extend-expect';
 import UserCard from './index';
 
 const user = {
-  display_name: 'Richard',
+  displayName: 'Richard',
   reputation: 500,
-  profile_image: '/path-to-image.png'
+  profileImage: '/path-to-image.png'
 };
 
 const { getByTestId, getByText } = render(<UserCard user={user} />);

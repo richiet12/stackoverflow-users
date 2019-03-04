@@ -5,8 +5,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import StarRatings from 'react-star-ratings';
 
-import starRating from '../../util/star-rating';
-import replaceImageSize from '../../util/replace-image-size';
+import starRating from '../../util/starRating';
+import replaceImageSize from '../../util/replaceImageSize';
 import Image from '../Image/';
 
 import colours from '../../styles/colours';
@@ -31,7 +31,6 @@ const UserCard = ({ user: { displayName, reputation, profileImage } }) => {
           starSpacing="2"
           data-testid="reputation"
         />
-        <p>({reputation})</p>
       </div>
     </div>
   );

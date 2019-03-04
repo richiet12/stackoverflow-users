@@ -1,0 +1,6 @@
+export default {
+  modifyBabelRc: (config) => {
+    config.babelrc = false
+    return config
+  }
+}

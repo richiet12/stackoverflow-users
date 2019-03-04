@@ -5,7 +5,8 @@ import Head from 'next/head';
 import { getUsers } from '../store/users';
 
 import Header from '../components/Header';
-import UserCard from '../components/UserCard/index';
+import UserCardList from '../components/UserCardList/index';
+import StarLegend from '../components/StarLegend/index';
 
 import pageStyles from '../styles/page';
 
@@ -20,7 +21,8 @@ const Index = ({ users }) => (
     </Head>
     <div className={pageStyles.container}>
       <Header text={title} />
-      {users.map(user => UserCard({ user }))}
+      <StarLegend />
+      <UserCardList users={users} />
     </div>
   </Fragment>
 );

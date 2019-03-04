@@ -8,7 +8,7 @@
     "lint-js": "./node_modules/.bin/eslint components/.",
     "docz:dev": "docz dev -p 3001",
     "docz:build": "docz build",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "dependencies": {
     "camelcase-keys": "^5.0.0",
