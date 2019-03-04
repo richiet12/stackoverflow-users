@@ -1,14 +1,16 @@
 import { css } from 'emotion';
 
+import sizes from '../../styles/sizes';
+
 const starLegend = css`
   display: flex;
-  margin: 20px auto;
+  margin: ${sizes.spacing.medium} auto;
   width: 240px;
   align-items: center;
 `;
 
 const starLegendText = css`
-  margin-left: 5px;
+  margin-left: ${sizes.spacing.small};
 `;
 
 export default { starLegend, starLegendText };

@@ -1,15 +1,16 @@
 import { css } from 'emotion';
 
 import colours from '../../styles/colours';
+import sizes from '../../styles/sizes';
 
 const header = css`
   background: ${colours.primary};
   color: ${colours.secondary};
-  padding: 5px 20px;
+  padding: ${sizes.spacing.small} ${sizes.spacing.medium};
 `;
 
 const title = css`
-  font-size: 42px;
+  font-size: ${sizes.fonts.large};
   text-align: center;
 `;
 
