@@ -12,16 +12,16 @@ import Image from '../Image/';
 import colours from '../../styles/colours';
 import styles from './styles';
 
-const UserCard = ({ user: { display_name, reputation, profile_image } }) => {
+const UserCard = ({ user: { displayName, reputation, profileImage } }) => {
   return (
     <div className={styles.userCard} data-testid="user-card">
       <Image
-        src={replaceImageSize(profile_image, 375)}
-        altText={`${display_name} profile image`}
+        src={replaceImageSize(profileImage, 375)}
+        altText={`${displayName} profile image`}
         styles={styles.profileImg}
       />
       <div className={styles.details}>
-        <p className={styles.name}>{display_name}</p>
+        <p className={styles.name}>{displayName}</p>
         <StarRatings
           rating={starRating(reputation)}
           starRatedColor={colours.primary}
@@ -31,6 +31,7 @@ const UserCard = ({ user: { display_name, reputation, profile_image } }) => {
           starSpacing="2"
           data-testid="reputation"
         />
+        <p>({reputation})</p>
       </div>
     </div>
   );
@@ -38,9 +39,9 @@ const UserCard = ({ user: { display_name, reputation, profile_image } }) => {
 
 UserCard.propTypes = {
   user: PropTypes.shape({
-    display_name: PropTypes.string,
+    displayName: PropTypes.string,
     reputation: PropTypes.number,
-    profile_image: PropTypes.string
+    profileImage: PropTypes.string
   }).isRequired
 };
 

@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Head from 'next/head';
+import { getUsers } from '../store/users';
 
 import Header from '../components/Header';
 import UserCard from '../components/UserCard/index';
@@ -9,7 +11,7 @@ import pageStyles from '../styles/page';
 
 const title = 'Top Stackoverflow users';
 
-const Index = ({ isLoading, users }) => (
+const Index = ({ users }) => (
   <Fragment>
     <Head>
       <title>{title}</title>
@@ -23,10 +25,22 @@ const Index = ({ isLoading, users }) => (
   </Fragment>
 );
 
-function mapStateToProps(state) {
-  console.log(state);
-  const { isLoading, users } = state;
-  return { isLoading, users };
-}
+Index.propTypes = {
+  users: PropTypes.arrayOf(
+    PropTypes.shape({
+      display_name: PropTypes.string,
+      reputation: PropTypes.number,
+      profile_image: PropTypes.string
+    })
+  ).isRequired
+};
 
-export default connect(mapStateToProps)(Index);
+Index.getInitialProps = async ({ reduxStore }) => {
+  await reduxStore.dispatch(getUsers());
+  return {};
+};
+
+export default connect(
+  ({ users }) => ({ users }),
+  { getUsers }
+)(Index);

@@ -10,6 +10,7 @@ const Header = ({ text }) => {
     </header>
   );
 };
+
 Header.propTypes = {
   text: PropTypes.string.isRequired
 };

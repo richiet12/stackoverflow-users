@@ -25,7 +25,7 @@ const response = {
       link: 'https://stackoverflow.com/users/22656/jon-skeet',
       profile_image:
         'https://www.gravatar.com/avatar/6d8ebb117e8d83d74ea95fbdd0f87e13?s=128&d=identicon&r=PG',
-      display_name: 'Jon Skeet'
+      display_name: 'Jon Skeet Mock'
     },
     {
       badge_counts: {
