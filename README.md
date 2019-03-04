@@ -44,9 +44,10 @@ To run the docz server (component documentation) run
 - I have not included any end to end tests, with more time I would have liked to use cyprus to write tests to simulate real user behaviour.
 - I wanted to add a detail view by adding a next <link> to a "detail" page with the users id in the url but I ran out of time.
 
-## Known bugs
+## Known bugs - would fix with more time
 
 - The CSS-in-JS is not currently compiled server side, which means when the page loads there is a flash of unstyled content. This can be fixed with configuring emotion to work with next.
+- Server side warning - <title> should not be used in \_document.js's. This requires refactoring the <Head> markup.
 
 ## Additional Questions
 
