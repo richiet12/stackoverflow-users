@@ -14,7 +14,7 @@ import styles from './styles';
 
 const UserCard = ({ user: { displayName, reputation, profileImage } }) => {
   return (
-    <div className={styles.userCard} data-testid="user-card">
+    <div className={styles.userCard} data-testid="user-card" key={displayName}>
       <Image
         src={replaceImageSize(profileImage, 375)}
         altText={`${displayName} profile image`}
