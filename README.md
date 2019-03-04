@@ -47,3 +47,24 @@ To run the docz server (component documentation) run
 ## Known bugs
 
 - The CSS-in-JS is not currently compiled server side, which means when the page loads there is a flash of unstyled content. This can be fixed with configuring emotion to work with next.
+
+## Additional Questions
+
+Explain your design decisions?
+
+- I wanted to keep the design simple and accessible so I chose a font which was clean and used colours that had a good contrast with background colours.
+- The design is mobile first. On mobile the image, name and reputations stars stack but on wider screens they side horizontally to take advantage of the the extra room.
+- The reputation number was hard to compare for each user so I added a star system to make it easier for the user to understand.
+- I used Redux to manage the state of the component however for the requirements of this project I think Redux may be overkill and using a simple fetch would have sufficed.
+
+Which architectural patterns have you used in the past for web development?
+
+- MVC - model, view, controller
+
+Top 5 tools I could not live without
+
+- VS code
+- Prettier & Eslint
+- Git
+- Chrome dev tools
+- Babel
