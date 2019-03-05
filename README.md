@@ -6,6 +6,8 @@ Display a list of the top stackoverflow users
 
 ## Setup
 
+Repo: https://github.com/richiet12/stackoverflow-users
+
 Please ensure npm v6.7.0 and node v11.10.0 are installed
 then in the root run
 
