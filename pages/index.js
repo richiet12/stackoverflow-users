@@ -11,15 +11,17 @@ import pageStyles from '../styles/page';
 
 const title = 'Top Stackoverflow users';
 
-const Index = ({ users }) => (
-  <Fragment>
-    <div className={pageStyles.container}>
-      <Header text={title} />
-      <StarLegend />
-      <UserCardList users={users} />
-    </div>
-  </Fragment>
-);
+const Index = ({ users, isError, isLoading }) => {
+  return (
+    <Fragment>
+      <div className={pageStyles.container}>
+        <Header text={title} />
+        <StarLegend />
+        <UserCardList users={users} isError={isError} isLoading={isLoading} />
+      </div>
+    </Fragment>
+  );
+};
 
 Index.propTypes = {
   users: PropTypes.arrayOf(
@@ -28,7 +30,9 @@ Index.propTypes = {
       reputation: PropTypes.number,
       profileImage: PropTypes.string
     })
-  ).isRequired
+  ).isRequired,
+  isError: PropTypes.bool.isRequired,
+  isLoading: PropTypes.bool.isRequired
 };
 
 Index.getInitialProps = async ({ reduxStore }) => {
@@ -37,6 +41,6 @@ Index.getInitialProps = async ({ reduxStore }) => {
 };
 
 export default connect(
-  ({ users }) => ({ users }),
+  ({ users, isError, isLoading }) => ({ users, isError, isLoading }),
   { getUsers }
 )(Index);
