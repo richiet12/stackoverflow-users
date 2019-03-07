@@ -11,8 +11,10 @@
     "test": "jest --coverage"
   },
   "dependencies": {
+    "@emotion/babel-preset-css-prop": "^10.0.7",
     "camelcase-keys": "^5.0.0",
     "emotion": "^10.0.7",
+    "emotion-server": "^10.0.7",
     "isomorphic-unfetch": "^3.0.0",
     "jest-dom": "^3.1.2",
     "next": "^7.0.3",
