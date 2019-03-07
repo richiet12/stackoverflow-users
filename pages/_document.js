@@ -28,7 +28,6 @@ class MyDocument extends Document {
     return (
       <html lang="en">
         <Head>
-          <title>Top Stackoverflow users</title>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
           <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" />
           {/* Temp fix to fix styling flash issue
